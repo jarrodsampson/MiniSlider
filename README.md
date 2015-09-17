@@ -4,7 +4,7 @@ For the Minimalist who just needs a basic slideshow in a complex world.
 [![Build Status](https://travis-ci.org/stevenbenner/jquery-powertip.svg?branch=master)](https://travis-ci.org/stevenbenner/jquery-powertip)
 ![License](https://img.shields.io/packagist/l/doctrine/orm.svg)
 
-![Atom](http://planlodge.com/github/record.gif)
+![Atom](https://raw.githubusercontent.com/planlodge/MiniSlider/master/demo/record.gif)
 
 ## Getting Started
 
