@@ -32,20 +32,15 @@
   //variable that will increment through the images
   var currentBg = 0;
 
-
-  var bgArr = [ 
-    'images/feature-11.png',
-    'images/feature-22.png',
-    'images/feature-33.png' 
-  ];
-
-
   var methods = {
 
     init: function(options) {
 
         var defaults = {
-
+			width: 500,
+			height: 400,
+			delay: 3000,
+			fadeSpeed: 1900
         };
 
         // default settings
@@ -56,19 +51,32 @@
         return this.each(function(){
 
           var el = "#" + $(this).attr('id');
+		  
+		  $(el).wrap("<div id='paper'></div>");
 
-          $('#slideshow').css("background-image", "url("+bgArr[currentBg++]+")").fadeIn(500);
+          $('#slideshow').css({
+			"background-image": "url("+defaults.images[currentBg++]+")",
+			"background-size":  defaults.width + "px "+ defaults.height + "px",
+			"width":  defaults.width + "px ",
+			"height": defaults.height + "px"
+		  });
+		  
+		  $('#paper').css({
+			"width":  defaults.width + "px ",
+			"height": defaults.height + "px"
+		  });
 
-          setInterval(methods.backgroundSlide, 3500);
+          setInterval( function() {methods.backgroundSlide(defaults.images, defaults.width, defaults.height, defaults.fadeSpeed);}, defaults.delay);
         });
-
-        
     },
-    backgroundSlide: function() {
+    backgroundSlide: function(images, width, height, speed) {
 
       $('#slideshow').hide();
-      $('#slideshow').css("background-image", "url("+bgArr[currentBg++]+")").fadeIn(900);
-         if (currentBg == bgArr.length) 
+      $('#slideshow').css({
+			"background-image": "url("+images[currentBg++]+")",
+			"background-size": width + "px "+ height + "px"
+		}).fadeIn(speed);
+         if (currentBg == images.length) 
         {
             currentBg = 0;
         }
@@ -76,9 +84,8 @@
 
   }
 
-
     // function method
-    $.fn.minislider = function(method) {
+    $.fn.miniSlider = function(method) {
 
         if (methods[method]) {
             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
