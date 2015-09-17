@@ -70,11 +70,6 @@ For the Minimalist who just needs a basic slideshow in a complex world.
 	</body>
 	</html>
 
-	
-**Note regarding Internet Explorer and Firefox support:**
-
-> Internet Explorer and Firefox do not currently support the css clip feature. Must have availability to use webkits.
-
 ## License
 
 Transimg is licensed under the [MIT license](http://opensource.org/licenses/MIT).
