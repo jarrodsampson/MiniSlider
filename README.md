@@ -72,4 +72,4 @@ For the Minimalist who just needs a basic slideshow in a complex world. Designed
 
 ## License
 
-Transimg is licensed under the [MIT license](http://opensource.org/licenses/MIT).
+MiniSlider is licensed under the [MIT license](http://opensource.org/licenses/MIT).
